@@ -1,0 +1,56 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>本格麻雀ゲーム</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1>本格麻雀ゲーム</h1>
+      <div id="settings">
+        <label>人数:
+          <select id="playerCount">
+            <option value="3">3人打ち</option>
+            <option value="4" selected>4人打ち</option>
+          </select>
+        </label>
+        <button id="startBtn">ゲーム開始</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="table">
+        <div id="roundInfo">東1局 0本場</div>
+        <div id="doraIndicator">ドラ表示牌：</div>
+        <div id="dealerIndicator">親：</div>
+
+        <div id="playersArea">
+          <!-- プレイヤーの手牌表示などはJSで動的生成 -->
+        </div>
+
+        <div id="centerArea">
+          <div id="discardPile"></div>
+          <div id="meldArea"></div>
+          <div id="actionButtons"></div>
+          <div id="messageArea"></div>
+        </div>
+      </section>
+
+      <section id="scoreBoard">
+        <h2>点数表</h2>
+        <div id="scoreTable"></div>
+      </section>
+    </main>
+
+    <footer>
+      <small>© 2025 麻雀ゲーム</small>
+    </footer>
+  </div>
+
+  <script src="mahjong.js"></script>
+</body>
+</html>
